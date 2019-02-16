@@ -1,42 +1,119 @@
 <!doctype html>
 <html>
 <head>
-	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript" src="calcfunctions.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="design.css">
+	<meta name="viewport" content="width=device-width">
 </head>
 <body>
-	<div class="container">
-		<div class="previous-output">
-			<textarea id="old-result"></textarea>
-		</div>
-		<div class="current-output">
-			<textarea id="result"></textarea>
-		</div>
-		<div class="buttons">
-			<button type="button" value="(">(</button>
-			<button type="button" value=")">)</button>
-			<button type="button" value="C">C</button>
-		
-			<button type="button" value="7">7</button>
-			<button type="button" value="8">8</button>
-			<button type="button" value="9">9</button>
-			<button type="button" value="/">/</button>
-			
-			<button type="button" value="4">4</button>
-			<button type="button" value="5">5</button>
-			<button type="button" value="6">6</button>
-			<button type="button" value="*">*</button>
-			
-			<button type="button" value="1">1</button>
-			<button type="button" value="2">2</button>
-			<button type="button" value="3">3</button>
-			<button type="button" value="-">-</button>
-			
-			<button type="button" value="0">0</button>
-			<button type="button" value=".">.</button>
-			<button type="button" value="=">=</button>
-			<button type="button" value="+">+</button>
+	<div class="container d-flex justify-content-center">
+		<div class="calculator-border">
+			<div class="output-window d-flex flex-column align-items-center">
+				<div class="previous-output p-2 w-100">
+					<div class="row">
+						<div class="col">
+							<textarea id="old-result" class="bg-secondary text-white"readonly></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="current-output p-2 w-100">
+					<div class="row">
+						<div class="col">
+							<textarea id="result" placeholder="0" readonly></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="buttons d-flex flex-column align-items-center justify-content-center">
+				<div class="row">
+					<div class="col">
+						<button class="btn btn-outline-secondary" type="button" value="(">(</button>
+					</div>
+					<div class="col">
+						<button class="btn btn-outline-secondary" type="button" value=")">)</button>
+					</div>
+					<div class="col">
+						<button class="btn btn-outline-secondary" type="button" id="C-Button" value="CE">CE</button>
+					</div>
+					<div class="col">
+						<button class="btn btn-outline-secondary" type="button" value="Ans">Ans</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<button class="btn btn-outline-primary" type="button" value="7">7</button>
+					</div>
+					<div class="col">
+						<button class="btn btn-outline-primary" type="button" value="8">8</button>
+					</div>
+					<div class="col">
+						<button class="btn btn-outline-primary" type="button" value="9">9</button>
+					</div>
+					<div class="col">
+						<button class="btn btn-outline-secondary" type="button" value="/">/</button>
+					</div>
+					
+					
+					
+					
+				</div>
+				<div class="row">
+					<div class="col">
+						<button class="btn btn-outline-primary" type="button" value="4">4</button>
+					</div>
+					<div class="col">
+						<button class="btn btn-outline-primary" type="button" value="5">5</button>
+					</div>
+					<div class="col">
+						<button class="btn btn-outline-primary" type="button" value="6">6</button>
+					</div>
+					<div class="col">
+						<button class="btn btn-outline-secondary" type="button" value="*">*</button>
+					</div>
+					
+					
+					
+					
+				</div>
+				<div class="row">
+					<div class="col">
+						<button class="btn btn-outline-primary" type="button" value="1">1</button>
+					</div>
+					<div class="col">
+						<button class="btn btn-outline-primary" type="button" value="2">2</button>
+					</div>
+					<div class="col">
+						<button class="btn btn-outline-primary" type="button" value="3">3</button>
+					</div>
+					<div class="col">
+						<button class="btn btn-outline-secondary" type="button" value="-">-</button>
+					</div>					
+				</div>
+				<div class="row">
+					<div class="col">
+						<button class="btn btn-outline-primary" type="button" value="0">0</button>
+					</div>
+					<div class="col">
+						<button class="btn btn-outline-secondary" type="button" value=".">.</button>
+					</div>
+					<div class="col">
+						<button class="btn btn-outline-success" type="button" value="=">=</button>
+					</div>
+					<div class="col">
+						<button class="btn btn-outline-secondary" type="button" value="+">+</button>
+					</div>
+					
+					
+					
+					
+				</div>
+			</div>
 		</div>
 	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

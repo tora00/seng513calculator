@@ -1,0 +1,81 @@
+.container{
+    width: 100%;
+}
+
+.calculator-border{
+    width: 100%;
+    height: 350px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.output-window{
+    width: 100%;
+}
+
+#old-result{
+    font-size: 11px;
+    height: 30px;
+    border: none;
+}
+
+#result{
+    font-size: 120%;
+    height: 50px;
+}
+
+textarea{
+    resize: none;
+    text-align: right;
+    padding-top: 10px;
+    width:100%;
+}
+
+button{
+    width: 75px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+@media only screen and (max-width: 768px){
+    .container{
+        max-width: inherit;
+        max-height: inherit;
+    }
+    
+    .calculator-border{
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .container{
+        max-width: inherit;
+        max-height: inherit;
+    }
+
+    .calculator-border{
+        height: 100%;
+    }
+
+    button{
+        width: 55px;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .container{
+        max-width: inherit;
+        max-height: inherit;
+    }
+    
+    .calculator-border{
+        height: 100%;
+    }
+
+    button{
+        width: 45px;
+    }
+}
